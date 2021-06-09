@@ -78,7 +78,7 @@ router.delete("/:wineryid", async (req, res) => {
 
     
     if (delWinery) {
-      res.status(200).json({ besked: "Todo er slettet", slettet: delWinery });
+      res.status(200).json({ besked: "Winery er slettet", slettet: delWinery });
     } else {
       
       res
