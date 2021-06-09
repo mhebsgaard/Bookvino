@@ -18,14 +18,6 @@ const winerySchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    pictures: {
-        type: String,
-        required: true
-    },
-    icons: {
-        type: String,
-        required: true
-    },
     mapcoords: {
         type: Number,
         required: true
@@ -55,10 +47,6 @@ const winerySchema = new mongoose.Schema({
         required: true
     },
     website: {
-        type: String,
-        required: true
-    },
-    ratings: {
         type: String,
         required: true
     }
