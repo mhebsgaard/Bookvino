@@ -1,0 +1,63 @@
+### SERVER
+
+GET http://localhost:5001/
+
+### Winerys - find alle
+
+GET http://localhost:5001/winery
+
+### Winerys - find ud fra _id
+
+GET http://localhost:5001/winery/60a769c555a0b748f0658a0a
+
+### Winerys POST ny
+
+POST http://localhost:5001/winery
+Content-Type: application/json
+
+{
+    "country": "Danmark",
+    "name": "Danish Wine Boys",
+    "location": "12333",
+    "description": "23123",
+    "pictures": "sdfasd",
+    "icons": "asdasd",
+    "mapcoords": "123123",
+    "price": "312214",
+    "adress": "sdasf",
+    "phone": "123123",
+    "mail": "@sdfsdf",
+    "nearby": "asdasd",
+    "openinghrs": "asdasd",
+    "website": "asdff",
+    "ratings": "sfsdf"
+    
+}
+
+### Winerys - DELETE
+
+DELETE http://localhost:5001/winery/60bf57644a0700310855365b
+
+### Winerys - PUT (ret)
+
+PUT http://localhost:5001/winery/60bf577c4a0700310855365c
+Content-Type: application/json
+
+{
+   "country": "Her er ny titel!",
+    "name": "Her er en ny todo",
+    "location": "123456778",
+    "description": "123123",
+    "pictures": "sdfasd",
+    "icons": "asdasd",
+    "mapcoords": "123123",
+    "price": "312214",
+    "adress": "sdasf",
+    "phone": "123123",
+    "mail": "@sdfsdf",
+    "nearby": "asdasd",
+    "openinghrs": "asdasd",
+    "website": "asdff",
+    "ratings": "sfsdf"
+}
+
