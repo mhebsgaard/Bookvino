@@ -16,7 +16,7 @@ POST http://localhost:5001/winery
 Content-Type: application/json
 
 {
-    "country": "Germany",
+    "country": "Holland",
     "name": "Her er et winery",
     "location": "123456778",
     "description": "Dette her er et rigtig godt sted",
