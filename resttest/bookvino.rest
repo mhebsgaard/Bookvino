@@ -16,16 +16,19 @@ POST http://localhost:5001/winery
 Content-Type: application/json
 
 {
-    "country": "Danmark",
-    "name": "Danish Wine Boys",
-    "description": "23123",
-    "pictures": "sdfasd",
-    "price": "312214",
-    "adress": "sdasf",
-    "phone": "123123",
-    "mail": "@sdfsdf",
-    "openinghrs": "asdasd",
-    "website": "asdff"
+    "country": "Italy",
+    "name": "Her er et winery",
+    "location": "123456778",
+    "description": "Dette her er et rigtig godt sted",
+    "mapcoords": "123123",
+    "price": "215 euro",
+    "adress": "Italy highway",
+    "phone": "87642342",
+    "mail": "winery@sdfsdf",
+    "nearby": "asdasd",
+    "openinghrs": "08-17",
+    "website": "www.winenowyay.com"
+    
       
 }
 
