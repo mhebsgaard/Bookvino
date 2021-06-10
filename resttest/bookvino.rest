@@ -18,20 +18,15 @@ Content-Type: application/json
 {
     "country": "Danmark",
     "name": "Danish Wine Boys",
-    "location": "12333",
     "description": "23123",
     "pictures": "sdfasd",
-    "icons": "asdasd",
-    "mapcoords": "123123",
     "price": "312214",
     "adress": "sdasf",
     "phone": "123123",
     "mail": "@sdfsdf",
-    "nearby": "asdasd",
     "openinghrs": "asdasd",
-    "website": "asdff",
-    "ratings": "sfsdf"
-    
+    "website": "asdff"
+      
 }
 
 ### Winerys - DELETE
