@@ -42,20 +42,19 @@ PUT http://localhost:5001/winery/60bf577c4a0700310855365c
 Content-Type: application/json
 
 {
-   "country": "Her er ny titel!",
-    "name": "Her er en ny todo",
+    "country": "Germany",
+    "name": "Her er et winery",
     "location": "123456778",
-    "description": "123123",
-    "pictures": "sdfasd",
-    "icons": "asdasd",
+    "description": "Dette her er et rigtig godt sted",
     "mapcoords": "123123",
-    "price": "312214",
-    "adress": "sdasf",
-    "phone": "123123",
-    "mail": "@sdfsdf",
+    "price": "215",
+    "adress": "Italy highway",
+    "phone": "87642342",
+    "mail": "winery@sdfsdf",
     "nearby": "asdasd",
-    "openinghrs": "asdasd",
-    "website": "asdff",
-    "ratings": "sfsdf"
+    "openinghrs": "08-17",
+    "website": "www.winenowyay.com"
+    
+      
 }
 
