@@ -21,7 +21,7 @@ Content-Type: application/json
     "location": "123456778",
     "description": "Dette her er et rigtig godt sted",
     "mapcoords": "123123",
-    "price": "215 euro",
+    "price": "215",
     "adress": "Italy highway",
     "phone": "87642342",
     "mail": "winery@sdfsdf",
