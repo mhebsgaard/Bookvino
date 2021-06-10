@@ -18,10 +18,6 @@ const winerySchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    mapcoords: {
-        type: Number,
-        required: true
-    },
     price: {
         type: Number,
         required: true
@@ -35,10 +31,6 @@ const winerySchema = new mongoose.Schema({
         required: true
     },
     mail: {
-        type: String,
-        required: true
-    },
-    nearby: {
         type: String,
         required: true
     },

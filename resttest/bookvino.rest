@@ -20,12 +20,10 @@ Content-Type: application/json
     "name": "Her er et winery",
     "location": "123456778",
     "description": "Dette her er et rigtig godt sted",
-    "mapcoords": "123123",
     "price": "215",
     "adress": "Italy highway",
     "phone": "87642342",
     "mail": "winery@sdfsdf",
-    "nearby": "asdasd",
     "openinghrs": "08-17",
     "website": "www.winenowyay.com"
     
@@ -46,12 +44,10 @@ Content-Type: application/json
     "name": "Her er et winery",
     "location": "123456778",
     "description": "Dette her er et rigtig godt sted",
-    "mapcoords": "123123",
     "price": "215",
     "adress": "Italy highway",
     "phone": "87642342",
     "mail": "winery@sdfsdf",
-    "nearby": "asdasd",
     "openinghrs": "08-17",
     "website": "www.winenowyay.com"
     
