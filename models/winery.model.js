@@ -11,7 +11,7 @@ const winerySchema = new mongoose.Schema({
         required: true
     },
     location: {
-        type: Number,
+        type: String,
         required: true
     },
     description: {
@@ -19,7 +19,7 @@ const winerySchema = new mongoose.Schema({
         required: true
     },
     price: {
-        type: Number,
+        type: String,
         required: true
     },
     adress: {
@@ -27,7 +27,7 @@ const winerySchema = new mongoose.Schema({
         required: true
     },
     phone: {
-        type: Number,
+        type: String,
         required: true
     },
     mail: {
@@ -39,6 +39,10 @@ const winerySchema = new mongoose.Schema({
         required: true
     },
     website: {
+        type: String,
+        required: true
+    },
+    pictures: {
         type: String,
         required: true
     }

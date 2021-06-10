@@ -16,16 +16,17 @@ POST http://localhost:5001/winery
 Content-Type: application/json
 
 {
-    "country": "Holland",
-    "name": "Her er et winery",
-    "location": "123456778",
-    "description": "Dette her er et rigtig godt sted",
-    "price": "215",
-    "adress": "Italy highway",
-    "phone": "87642342",
-    "mail": "winery@sdfsdf",
-    "openinghrs": "08-17",
-    "website": "www.winenowyay.com"
+    "country": "Italy",
+    "name": "Marco Reggio",
+    "location": "Castelnuovo Calcea (AT)",
+    "description": "Our cellar has been producing wine since 1800, we are in Castelnuovo Calcea, a small village in the heart of Monferrato.",
+    "price": "15",
+    "adress": "Via Momparone 2/B, 14040",
+    "phone": "+390456261292 / +393201133324",
+    "mail": "marcoreg@liberoit",
+    "openinghrs": "8.30 am - 7 pm",
+    "website": "http://www.marcoreg.libero.it",
+    "pictures": ""
     
       
 }
@@ -49,7 +50,8 @@ Content-Type: application/json
     "phone": "87642342",
     "mail": "winery@sdfsdf",
     "openinghrs": "08-17",
-    "website": "www.winenowyay.com"
+    "website": "www.winenowyay.com",
+    "pictures": ""
     
       
 }
