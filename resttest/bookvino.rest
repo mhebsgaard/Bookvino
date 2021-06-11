@@ -26,7 +26,7 @@ Content-Type: application/json
     "mail": "marcoreg@liberoit",
     "openinghrs": "8.30 am - 7 pm",
     "website": "http://www.marcoreg.libero.it",
-    "pictures": ""
+    "pictures": "hest.jpg"
     
       
 }

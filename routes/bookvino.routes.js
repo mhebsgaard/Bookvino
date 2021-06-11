@@ -3,6 +3,22 @@ const bookvino = require("../models/winery.model");
 const express = require("express");
 const router = express.Router();
 
+const multer = require( 'multer' );
+const upload = multer( {
+
+    storage: multer.diskStorage( {
+        destination: function ( req, file, cb ) {
+          console.log(file)
+            cb( null, 'public/images' );
+        },
+        filename: function ( req, file, cb ) {
+          console.log(file)
+            cb(null, Date.now() + '-' + file.originalname)
+           // cb( null, file.originalname )
+        }
+    } )
+} );
+
 router.get("/", async (req, res) => {
   try {
     const winerys = await bookvino.find();
@@ -28,10 +44,12 @@ router.get("/:wineryid", async (req, res) => {
 
 
 
-router.post("/", async (req, res) => {
+router.post("/", upload.single('pictures'), async (req, res) => {
+  console.log("body", req.body, req.file)
   try {
     
     let newwinery = new bookvino(req.body);
+    newwinery.pictures = req.file ? req.file.filename : "le-marognole.png";
     await newwinery.save(); 
 
     

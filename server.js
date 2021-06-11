@@ -4,12 +4,13 @@ const app = express();
 const PORT = 5001;
 
 
-const formData = require("express-form-data");
-app.use(formData.parse());
+// const formData = require("express-form-data");
+// app.use(formData.parse());
 
 
 
 app.use(cors({ credentials: true, origin: true })); 
+app.use(express.static('public'))
 app.use(express.json()); 
 app.use(express.urlencoded({ extended: true }));
 
