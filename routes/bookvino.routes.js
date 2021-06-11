@@ -55,10 +55,10 @@ router.post("/", upload.single('pictures'), async (req, res) => {
     
     res
       .status(201)
-      .json({ besked: "Der er oprettet en ny todo!", oprettet: newwinery });
+      .json({ besked: "You've created a new winery!", oprettet: newwinery });
   } catch (error) {
     console.log(error);
-    res.status(400).json({ besked: "Der er sket en fejl" });
+    res.status(400).json({ besked: "There is an error" });
   }
 });
 
@@ -68,7 +68,7 @@ router.put("/:wineryid", async (req, res) => {
   
  
   if(JSON.stringify(req.body) === "{}" ) {
-    return res.status(410).json({besked: "Ingen data til at rette"});
+    return res.status(410).json({besked: "No data to edit"});
   }
 
   try {
@@ -77,15 +77,15 @@ router.put("/:wineryid", async (req, res) => {
     });
 
     if (editWinery) {
-      res.status(200).json({ besked: "Todo er rettet", rettet: editWinery });
+      res.status(200).json({ besked: "Winery edited", rettet: editWinery });
     } else {
       res
         .status(410)
-        .json({ besked: "Der blev ikke rettet noget", rettet: editWinery });
+        .json({ besked: "Nothing was edited", rettet: editWinery });
     }
   } catch (error) {
     console.log("FEJL", error);
-    res.status(500).json({ besked: "Der er sket en fejl" });
+    res.status(500).json({ besked: "There is an error" });
   }
 });
 
@@ -96,16 +96,16 @@ router.delete("/:wineryid", async (req, res) => {
 
     
     if (delWinery) {
-      res.status(200).json({ besked: "Winery er slettet", slettet: delWinery });
+      res.status(200).json({ besked: "Winery has been deleted", slettet: delWinery });
     } else {
       
       res
         .status(410)
-        .json({ besked: "Der blev ikke slettet noget", slettet: delWinery });
+        .json({ besked: "Nothing has been deleted", slettet: delWinery });
     }
   } catch (error) {
     console.log("FEJL", error);
-    res.status(500).json({ besked: "Der er sket en fejl" });
+    res.status(500).json({ besked: "There is an error" });
   }
 });
 
