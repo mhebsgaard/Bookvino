@@ -26,7 +26,7 @@ router.get("/", async (req, res) => {
     
     res.status(200).json(winerys);
   } catch (error) {
-    res.status(500).json({ besked: "There is an error in " + error.message });
+    res.status(500).json({ message: "There is an error in " + error.message });
   }
 });
 
@@ -38,7 +38,7 @@ router.get("/:wineryid", async (req, res) => {
     
     res.status(200).json(winery);
   } catch (error) {
-    res.status(500).json({ besked: "There is an error in " + error.message });
+    res.status(500).json({ message: "There is an error in " + error.message });
   }
 });
 
@@ -55,10 +55,10 @@ router.post("/", upload.single('pictures'), async (req, res) => {
     
     res
       .status(201)
-      .json({ besked: "You've created a new winery!", oprettet: newwinery });
+      .json({ message: "You've created a new winery!", created: newwinery });
   } catch (error) {
     console.log(error);
-    res.status(400).json({ besked: "There is an error" });
+    res.status(400).json({ message: "There is an error" });
   }
 });
 
@@ -68,7 +68,7 @@ router.put("/:wineryid", async (req, res) => {
   
  
   if(JSON.stringify(req.body) === "{}" ) {
-    return res.status(410).json({besked: "No data to edit"});
+    return res.status(410).json({message: "No data to edit"});
   }
 
   try {
@@ -77,15 +77,15 @@ router.put("/:wineryid", async (req, res) => {
     });
 
     if (editWinery) {
-      res.status(200).json({ besked: "Winery edited", rettet: editWinery });
+      res.status(200).json({ message: "Winery edited", edited: editWinery });
     } else {
       res
         .status(410)
-        .json({ besked: "Nothing was edited", rettet: editWinery });
+        .json({ message: "Nothing was edited", edited: editWinery });
     }
   } catch (error) {
-    console.log("FEJL", error);
-    res.status(500).json({ besked: "There is an error" });
+    console.log("ERROR", error);
+    res.status(500).json({ message: "There is an error" });
   }
 });
 
@@ -96,16 +96,16 @@ router.delete("/:wineryid", async (req, res) => {
 
     
     if (delWinery) {
-      res.status(200).json({ besked: "Winery has been deleted", slettet: delWinery });
+      res.status(200).json({ message: "Winery has been deleted", deleted: delWinery });
     } else {
       
       res
         .status(410)
-        .json({ besked: "Nothing has been deleted", slettet: delWinery });
+        .json({ message: "Nothing has been deleted", deleted: delWinery });
     }
   } catch (error) {
-    console.log("FEJL", error);
-    res.status(500).json({ besked: "There is an error" });
+    console.log("ERROR", error);
+    res.status(500).json({ message: "There is an error" });
   }
 });
 
