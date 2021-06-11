@@ -16,10 +16,10 @@ app.use(express.urlencoded({ extended: true }));
 
 
 app.get("/", async (req, res) => {
-  console.log("Serveren er startet op! - her er startsiden!!");
+  console.log("The server is started! - Here is the homepage!!");
 
   
-  res.status(200).json({ besked: "velkommen til serverens startside" });
+  res.status(200).json({ besked: "Welcome the the servers homepage" });
 });
 
 
@@ -34,11 +34,11 @@ mongoose
     serverSelectionTimeoutMS: 5000,
     connectTimeoutMS: 10000,
   })
-  .catch((error) => console.error("FEJL i connection til database"));
+  .catch((error) => console.error("FAIL in connection to database"));
 const db = mongoose.connection;
 
 
-db.once("open", () => console.log("/// ---> DB-SERVER er klar"));
+db.once("open", () => console.log("/// ---> DB-SERVER is ready"));
 
 
 app.use("/winery", require("./routes/bookvino.routes"));
@@ -46,5 +46,5 @@ app.use("/winery", require("./routes/bookvino.routes"));
 
 
 app.listen(PORT, () => {
-  console.log("/// ---> API-SERVER er klar og lytter til port nummer " + PORT);
+  console.log("/// ---> API-SERVER is ready and listening to port no. " + PORT);
 });
