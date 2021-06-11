@@ -26,7 +26,7 @@ router.get("/", async (req, res) => {
     
     res.status(200).json(winerys);
   } catch (error) {
-    res.status(500).json({ besked: "Der er sket fejl i " + error.message });
+    res.status(500).json({ besked: "There is an error in " + error.message });
   }
 });
 
@@ -38,7 +38,7 @@ router.get("/:wineryid", async (req, res) => {
     
     res.status(200).json(winery);
   } catch (error) {
-    res.status(500).json({ besked: "Der er sket fejl i " + error.message });
+    res.status(500).json({ besked: "There is an error in " + error.message });
   }
 });
 
