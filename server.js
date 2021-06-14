@@ -1,4 +1,4 @@
-require('dotenv').config()
+require('dotenv').config() // Implementerer vores .env-fil
 const express = require("express");
 const cors = require("cors");
 const app = express();
@@ -7,8 +7,6 @@ const PORT = 5001;
 
 // const formData = require("express-form-data");
 // app.use(formData.parse());
-
-
 
 app.use(cors({ credentials: true, origin: true })); 
 app.use(express.static('public'))
@@ -23,12 +21,9 @@ app.get("/", async (req, res) => {
   res.status(200).json({ besked: "Welcome the the servers homepage" });
 });
 
-
-
 const mongoose = require("mongoose");
 
-//mongoose.connect(process.env.DATABASE_URL, {useNewUrlParser: true, useUnifiedTopology: true})
-
+// Vi henter data fra mongodb cluster (shared data) via vores .env, som vi har navngivet DATABASE_URL
 mongoose
   .connect(process.env.DATABASE_URL, {
     useNewUrlParser: true,
