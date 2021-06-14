@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require("express");
 const cors = require("cors");
 const app = express();
@@ -26,15 +27,17 @@ app.get("/", async (req, res) => {
 
 const mongoose = require("mongoose");
 
+//mongoose.connect(process.env.DATABASE_URL, {useNewUrlParser: true, useUnifiedTopology: true})
+
 mongoose
-  .connect("mongodb://localhost/bookvino", {
+  .connect(process.env.DATABASE_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
     serverSelectionTimeoutMS: 5000,
     connectTimeoutMS: 10000,
   })
-  .catch((error) => console.error("FAIL in connection to database"));
+  .catch((error) => console.error(error));
 const db = mongoose.connection;
 
 
