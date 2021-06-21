@@ -48,11 +48,10 @@ router.post("/", upload.single('pictures'), async (req, res) => {
   console.log("body", req.body, req.file)
   try {
     
-    let newwinery = new bookvino(req.body);
+    newwinery = new bookvino(req.body);
     newwinery.pictures = req.file ? req.file.filename : "le-marognole.png";
-    await newwinery.save(); 
-
     
+    await newwinery.save(); 
     res
       .status(201)
       .json({ message: "You've created a new winery!", created: newwinery });

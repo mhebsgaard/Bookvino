@@ -27,8 +27,7 @@ Content-Type: application/json
     "openinghrs": "8.30 am - 7 pm",
     "website": "http://www.marcoreg.libero.it",
     "pictures": "hest.jpg"
-    
-      
+
 }
 
 ### Winerys - DELETE
